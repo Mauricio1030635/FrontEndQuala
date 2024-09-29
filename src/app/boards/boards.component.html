@@ -1,0 +1,23 @@
+<div class="wrapper">
+    <aside id="sidebar" [ngClass]="{'expand': isSidebarExpanded}">
+        <div class="d-flex">
+            <button class="toggle-btn" (click)="toggleSidebar()" type="button">
+                <i class="lni lni-home"></i>
+            </button>
+            <div class="sidebar-logo">
+                Quala
+            </div>
+        </div>
+        <app-menu></app-menu>
+
+        <div class="sidebar-footer">
+            <a style="cursor: pointer;" (click)="logout()" class="sidebar-link">
+                <i class="lni lni-exit"></i>
+                <span>Logout</span>
+            </a>
+        </div>
+    </aside>
+    <div class="main p-3">
+        <router-outlet></router-outlet>
+    </div>
+</div>
